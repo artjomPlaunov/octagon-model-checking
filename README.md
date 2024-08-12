@@ -4,4 +4,4 @@ useful invariants for predicate abstraction based model checking.
 
 This is of interest since relational predicates from octagon analysis
 are of the form x+y <= C, and in some cases these predicates can be useful
-for predicate abstraction. 
+for predicate abstraction. # octagon-model-checking
