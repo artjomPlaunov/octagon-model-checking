@@ -1,0 +1,21 @@
+none:	N20 -{INIT GLOBAL VARS}-> N42
+line 1:	N42 -{void abort();}-> N43
+line 2:	N43 -{void __assert_fail(const char *, const char *, unsigned int, const char *);}-> N44
+line 3:	N44 -{void reach_error();}-> N45
+lines 5-7:	N45 -{void assume_abort_if_not(int cond);}-> N46
+lines 8-13:	N46 -{void __VERIFIER_assert(int cond);}-> N47
+line 14:	N47 -{void __VERIFIER_assume(int);}-> N48
+line 15:	N48 -{int __VERIFIER_nondet_int();}-> N49
+line 16:	N49 -{unsigned int __VERIFIER_nondet_uint();}-> N50
+lines 18-34:	N50 -{int main();}-> N51
+none:	N51 -{Function start dummy edge}-> N21
+line 19:	N21 -{int A[2048] = { 0 };}-> N22
+line 20:	N22 -{int B[2048] = { 0 };}-> N23
+line 21:	N23 -{int i;}-> N24
+line 22:	N24 -{int tmp;}-> N25
+line 23:	N25 -{i = 0;}-> N26
+line 24:	N26 -{[!(i < 2048)]}-> N27
+line 33:	N27 -{__VERIFIER_assert((A[1024]) == (B[1024]))}-> N11
+none:	N11 -{Function start dummy edge}-> N12
+line 9:	N12 -{[cond == 0]}-> N14
+line 10:	N14 -{Label: ERROR}-> N15

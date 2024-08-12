@@ -1,0 +1,9 @@
+main::n	0
+main::__CPAchecker_TMP_2	6
+main::__CPAchecker_TMP_1	0
+main::runtime_div	0
+main::__CPAchecker_TMP_0	0
+main::y	0
+main::i	0
+main::x	0
+__VERIFIER_assert::cond	0

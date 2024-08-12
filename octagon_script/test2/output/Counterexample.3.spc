@@ -1,0 +1,178 @@
+CONTROL AUTOMATON ErrorPath3
+
+INITIAL STATE ARG0;
+
+STATE USEFIRST ARG0 :
+    MATCH "" -> GOTO ARG36;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG36 :
+    MATCH "extern void abort(void);" -> GOTO ARG37_1_1;
+STATE USEFIRST ARG37_0_1 :
+    MATCH "extern void abort(void);" -> GOTO ARG37_1_1;
+STATE USEFIRST ARG37_1_1 :
+    MATCH "void __VERIFIER_assert(int cond)" -> GOTO ARG37_2_1;
+STATE USEFIRST ARG37_2_1 :
+    MATCH "extern int __VERIFIER_nondet_int(void);" -> GOTO ARG37_3_1;
+STATE USEFIRST ARG37_3_1 :
+    MATCH "extern void __VERIFIER_assume(int);" -> GOTO ARG37_4_1;
+STATE USEFIRST ARG37_4_1 :
+    MATCH "int main()" -> GOTO ARG37_5_1;
+STATE USEFIRST ARG37_5_1 :
+    MATCH "" -> GOTO ARG37_6_1;
+STATE USEFIRST ARG37_6_1 :
+    MATCH "int x = 0;" -> GOTO ARG37_7_1;
+STATE USEFIRST ARG37_7_1 :
+    MATCH "int n = __VERIFIER_nondet_int();" -> GOTO ARG37_8_1;
+STATE USEFIRST ARG37_8_1 :
+    MATCH "int n = __VERIFIER_nondet_int();" -> GOTO ARG37;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG37 :
+    MATCH "[!(n < 100 || n > 1000000)]" -> GOTO ARG39;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG39 :
+    MATCH "[!(n < 100 || n > 1000000)]" -> GOTO ARG41;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG41 :
+    MATCH "int y = n;" -> GOTO ARG43_1_2;
+STATE USEFIRST ARG43_0_2 :
+    MATCH "int y = n;" -> GOTO ARG43_1_2;
+STATE USEFIRST ARG43_1_2 :
+    MATCH "int runtime_div;" -> GOTO ARG43;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG43 :
+    MATCH "" -> GOTO ARG72;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG72 :
+    MATCH "[!(x + y <= 999999)]" -> GOTO ARG74;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG74 :
+    MATCH "int i = x + y;" -> GOTO ARG75;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG75 :
+    MATCH "" -> GOTO ARG77;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG77 :
+    MATCH "[x + y > 0]" -> GOTO ARG78;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG78 :
+    MATCH "[x > 0]" -> GOTO ARG100;
+    MATCH "[!(x > 0)]" -> GOTO ARG101;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG100 :
+    MATCH "x -= 1;" -> GOTO ARG108;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG101 :
+    MATCH "[y > 0]" -> GOTO ARG102;
+    MATCH "[!(y > 0)]" -> GOTO ARG103;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG102 :
+    MATCH "y -= 1;" -> GOTO ARG105;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG103 :
+    MATCH "" -> GOTO ARG110;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG105 :
+    MATCH "" -> GOTO ARG110;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG108 :
+    MATCH "" -> GOTO ARG110;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG110 :
+    MATCH "__VERIFIER_assert(i + 1 <= 0x7fffffff);" -> GOTO ARG111;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG111 :
+    MATCH "" -> GOTO ARG112;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG112 :
+    MATCH "[!(!(cond))]" -> GOTO ARG114;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG114 :
+    MATCH "" -> GOTO ARG116;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG116 :
+    MATCH "" -> GOTO ARG117;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG117 :
+    MATCH "i += 1;" -> GOTO ARG118;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG118 :
+    MATCH "" -> GOTO ARG120;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG120 :
+    MATCH "[!(x + y > 0)]" -> GOTO ARG122;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG122 :
+    MATCH "__FRAMAC_OCTAGON8:;" -> GOTO ARG123;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG123 :
+    MATCH "__VERIFIER_assume(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG124;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG124 :
+    MATCH "[100 <= x + n]" -> GOTO ARG125;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG129;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG125 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG127;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG129;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG127 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG132;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG129 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG132;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG132 :
+    MATCH "[__VERIFIER_assume(100 <= x + n && x + n <= 0x7fffffff);]" -> GOTO ARG133;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG133 :
+    MATCH "__VERIFIER_assert(2 * x + y + n >= 100);" -> GOTO ARG135;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG135 :
+    MATCH "" -> GOTO ARG136;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG136 :
+    MATCH "[!(cond)]" -> GOTO ARG137;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG137 :
+    MATCH "ERROR : { abort(); }" -> ERROR;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG140 :
+    TRUE -> STOP;
+
+END AUTOMATON

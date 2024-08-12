@@ -1,0 +1,15 @@
+digraph functioncalls {
+rankdir=LR;
+
+main [shape="box", color=blue];
+__VERIFIER_nondet_uint [label="__VERIFIER_nondet_uint", shape="box", color=grey];
+main -> __VERIFIER_nondet_uint;
+mp_add [label="mp_add", ];
+main -> mp_add;
+__VERIFIER_assert [label="__VERIFIER_assert", ];
+main -> __VERIFIER_assert;
+reach_error [label="reach_error", ];
+__VERIFIER_assert -> reach_error;
+__assert_fail [label="__assert_fail", shape="box", color=grey];
+reach_error -> __assert_fail;
+}

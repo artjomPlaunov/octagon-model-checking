@@ -1,0 +1,656 @@
+CONTROL AUTOMATON ErrorPath10
+
+INITIAL STATE ARG0;
+
+STATE USEFIRST ARG0 :
+    MATCH "" -> GOTO ARG29;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG29 :
+    MATCH "extern void abort(void);" -> GOTO ARG30_1_1;
+STATE USEFIRST ARG30_0_1 :
+    MATCH "extern void abort(void);" -> GOTO ARG30_1_1;
+STATE USEFIRST ARG30_1_1 :
+    MATCH "void __VERIFIER_assert(int cond)" -> GOTO ARG30_2_1;
+STATE USEFIRST ARG30_2_1 :
+    MATCH "extern int __VERIFIER_nondet_int(void);" -> GOTO ARG30_3_1;
+STATE USEFIRST ARG30_3_1 :
+    MATCH "extern void __VERIFIER_assume(int);" -> GOTO ARG30_4_1;
+STATE USEFIRST ARG30_4_1 :
+    MATCH "extern void __VERIFIER_assert(int);" -> GOTO ARG30_5_1;
+STATE USEFIRST ARG30_5_1 :
+    MATCH "int main ()" -> GOTO ARG30_6_1;
+STATE USEFIRST ARG30_6_1 :
+    MATCH "" -> GOTO ARG30_7_1;
+STATE USEFIRST ARG30_7_1 :
+    MATCH "int x = 0;" -> GOTO ARG30_8_1;
+STATE USEFIRST ARG30_8_1 :
+    MATCH "int n = __VERIFIER_nondet_int();" -> GOTO ARG30_9_1;
+STATE USEFIRST ARG30_9_1 :
+    MATCH "int n = __VERIFIER_nondet_int();" -> GOTO ARG30;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG30 :
+    MATCH "[!(n < 100 || n > 1000000)]" -> GOTO ARG32;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG32 :
+    MATCH "[!(n < 100 || n > 1000000)]" -> GOTO ARG34;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG34 :
+    MATCH "int y = n;" -> GOTO ARG36_1_2;
+STATE USEFIRST ARG36_0_2 :
+    MATCH "int y = n;" -> GOTO ARG36_1_2;
+STATE USEFIRST ARG36_1_2 :
+    MATCH "int runtime_div;" -> GOTO ARG36;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG36 :
+    MATCH "" -> GOTO ARG814;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG814 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG815;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG815 :
+    MATCH "x++;" -> GOTO ARG818_1_3;
+STATE USEFIRST ARG818_0_3 :
+    MATCH "x++;" -> GOTO ARG818_1_3;
+STATE USEFIRST ARG818_1_3 :
+    MATCH "x++;" -> GOTO ARG818_2_3;
+STATE USEFIRST ARG818_2_3 :
+    MATCH "x++;" -> GOTO ARG818_3_3;
+STATE USEFIRST ARG818_3_3 :
+    MATCH "y--;" -> GOTO ARG818_4_3;
+STATE USEFIRST ARG818_4_3 :
+    MATCH "y--;" -> GOTO ARG818_5_3;
+STATE USEFIRST ARG818_5_3 :
+    MATCH "y--;" -> GOTO ARG818_6_3;
+STATE USEFIRST ARG818_6_3 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG818;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG818 :
+    MATCH "[100 <= x + n]" -> GOTO ARG819;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG823;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG819 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG821;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG823;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG821 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG826;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG823 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG826;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG826 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG827;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG827 :
+    MATCH "" -> GOTO ARG828;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG828 :
+    MATCH "[!(!(cond))]" -> GOTO ARG830;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG830 :
+    MATCH "" -> GOTO ARG832;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG832 :
+    MATCH "" -> GOTO ARG833;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG833 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG834;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG834 :
+    MATCH "" -> GOTO ARG836;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG836 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG837;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG837 :
+    MATCH "x++;" -> GOTO ARG840_1_4;
+STATE USEFIRST ARG840_0_4 :
+    MATCH "x++;" -> GOTO ARG840_1_4;
+STATE USEFIRST ARG840_1_4 :
+    MATCH "x++;" -> GOTO ARG840_2_4;
+STATE USEFIRST ARG840_2_4 :
+    MATCH "x++;" -> GOTO ARG840_3_4;
+STATE USEFIRST ARG840_3_4 :
+    MATCH "y--;" -> GOTO ARG840_4_4;
+STATE USEFIRST ARG840_4_4 :
+    MATCH "y--;" -> GOTO ARG840_5_4;
+STATE USEFIRST ARG840_5_4 :
+    MATCH "y--;" -> GOTO ARG840_6_4;
+STATE USEFIRST ARG840_6_4 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG840;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG840 :
+    MATCH "[100 <= x + n]" -> GOTO ARG841;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG845;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG841 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG843;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG845;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG843 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG848;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG845 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG848;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG848 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG849;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG849 :
+    MATCH "" -> GOTO ARG850;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG850 :
+    MATCH "[!(!(cond))]" -> GOTO ARG852;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG852 :
+    MATCH "" -> GOTO ARG854;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG854 :
+    MATCH "" -> GOTO ARG855;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG855 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG856;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG856 :
+    MATCH "" -> GOTO ARG858;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG858 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG859;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG859 :
+    MATCH "x++;" -> GOTO ARG862_1_5;
+STATE USEFIRST ARG862_0_5 :
+    MATCH "x++;" -> GOTO ARG862_1_5;
+STATE USEFIRST ARG862_1_5 :
+    MATCH "x++;" -> GOTO ARG862_2_5;
+STATE USEFIRST ARG862_2_5 :
+    MATCH "x++;" -> GOTO ARG862_3_5;
+STATE USEFIRST ARG862_3_5 :
+    MATCH "y--;" -> GOTO ARG862_4_5;
+STATE USEFIRST ARG862_4_5 :
+    MATCH "y--;" -> GOTO ARG862_5_5;
+STATE USEFIRST ARG862_5_5 :
+    MATCH "y--;" -> GOTO ARG862_6_5;
+STATE USEFIRST ARG862_6_5 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG862;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG862 :
+    MATCH "[100 <= x + n]" -> GOTO ARG863;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG867;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG863 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG865;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG867;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG865 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG870;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG867 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG870;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG870 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG871;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG871 :
+    MATCH "" -> GOTO ARG872;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG872 :
+    MATCH "[!(!(cond))]" -> GOTO ARG874;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG874 :
+    MATCH "" -> GOTO ARG876;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG876 :
+    MATCH "" -> GOTO ARG877;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG877 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG878;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG878 :
+    MATCH "" -> GOTO ARG880;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG880 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG881;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG881 :
+    MATCH "x++;" -> GOTO ARG884_1_6;
+STATE USEFIRST ARG884_0_6 :
+    MATCH "x++;" -> GOTO ARG884_1_6;
+STATE USEFIRST ARG884_1_6 :
+    MATCH "x++;" -> GOTO ARG884_2_6;
+STATE USEFIRST ARG884_2_6 :
+    MATCH "x++;" -> GOTO ARG884_3_6;
+STATE USEFIRST ARG884_3_6 :
+    MATCH "y--;" -> GOTO ARG884_4_6;
+STATE USEFIRST ARG884_4_6 :
+    MATCH "y--;" -> GOTO ARG884_5_6;
+STATE USEFIRST ARG884_5_6 :
+    MATCH "y--;" -> GOTO ARG884_6_6;
+STATE USEFIRST ARG884_6_6 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG884;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG884 :
+    MATCH "[100 <= x + n]" -> GOTO ARG885;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG889;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG885 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG887;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG889;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG887 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG892;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG889 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG892;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG892 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG893;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG893 :
+    MATCH "" -> GOTO ARG894;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG894 :
+    MATCH "[!(!(cond))]" -> GOTO ARG896;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG896 :
+    MATCH "" -> GOTO ARG898;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG898 :
+    MATCH "" -> GOTO ARG899;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG899 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG900;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG900 :
+    MATCH "" -> GOTO ARG902;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG902 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG903;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG903 :
+    MATCH "x++;" -> GOTO ARG906_1_7;
+STATE USEFIRST ARG906_0_7 :
+    MATCH "x++;" -> GOTO ARG906_1_7;
+STATE USEFIRST ARG906_1_7 :
+    MATCH "x++;" -> GOTO ARG906_2_7;
+STATE USEFIRST ARG906_2_7 :
+    MATCH "x++;" -> GOTO ARG906_3_7;
+STATE USEFIRST ARG906_3_7 :
+    MATCH "y--;" -> GOTO ARG906_4_7;
+STATE USEFIRST ARG906_4_7 :
+    MATCH "y--;" -> GOTO ARG906_5_7;
+STATE USEFIRST ARG906_5_7 :
+    MATCH "y--;" -> GOTO ARG906_6_7;
+STATE USEFIRST ARG906_6_7 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG906;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG906 :
+    MATCH "[100 <= x + n]" -> GOTO ARG907;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG911;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG907 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG909;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG911;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG909 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG914;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG911 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG914;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG914 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG915;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG915 :
+    MATCH "" -> GOTO ARG916;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG916 :
+    MATCH "[!(!(cond))]" -> GOTO ARG918;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG918 :
+    MATCH "" -> GOTO ARG920;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG920 :
+    MATCH "" -> GOTO ARG921;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG921 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG922;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG922 :
+    MATCH "" -> GOTO ARG924;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG924 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG925;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG925 :
+    MATCH "x++;" -> GOTO ARG928_1_8;
+STATE USEFIRST ARG928_0_8 :
+    MATCH "x++;" -> GOTO ARG928_1_8;
+STATE USEFIRST ARG928_1_8 :
+    MATCH "x++;" -> GOTO ARG928_2_8;
+STATE USEFIRST ARG928_2_8 :
+    MATCH "x++;" -> GOTO ARG928_3_8;
+STATE USEFIRST ARG928_3_8 :
+    MATCH "y--;" -> GOTO ARG928_4_8;
+STATE USEFIRST ARG928_4_8 :
+    MATCH "y--;" -> GOTO ARG928_5_8;
+STATE USEFIRST ARG928_5_8 :
+    MATCH "y--;" -> GOTO ARG928_6_8;
+STATE USEFIRST ARG928_6_8 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG928;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG928 :
+    MATCH "[100 <= x + n]" -> GOTO ARG929;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG933;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG929 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG931;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG933;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG931 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG936;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG933 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG936;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG936 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG937;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG937 :
+    MATCH "" -> GOTO ARG938;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG938 :
+    MATCH "[!(!(cond))]" -> GOTO ARG940;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG940 :
+    MATCH "" -> GOTO ARG942;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG942 :
+    MATCH "" -> GOTO ARG943;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG943 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG944;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG944 :
+    MATCH "" -> GOTO ARG946;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG946 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG947;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG947 :
+    MATCH "x++;" -> GOTO ARG950_1_9;
+STATE USEFIRST ARG950_0_9 :
+    MATCH "x++;" -> GOTO ARG950_1_9;
+STATE USEFIRST ARG950_1_9 :
+    MATCH "x++;" -> GOTO ARG950_2_9;
+STATE USEFIRST ARG950_2_9 :
+    MATCH "x++;" -> GOTO ARG950_3_9;
+STATE USEFIRST ARG950_3_9 :
+    MATCH "y--;" -> GOTO ARG950_4_9;
+STATE USEFIRST ARG950_4_9 :
+    MATCH "y--;" -> GOTO ARG950_5_9;
+STATE USEFIRST ARG950_5_9 :
+    MATCH "y--;" -> GOTO ARG950_6_9;
+STATE USEFIRST ARG950_6_9 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG950;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG950 :
+    MATCH "[100 <= x + n]" -> GOTO ARG951;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG955;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG951 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG953;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG955;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG953 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG958;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG955 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG958;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG958 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG959;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG959 :
+    MATCH "" -> GOTO ARG960;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG960 :
+    MATCH "[!(!(cond))]" -> GOTO ARG962;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG962 :
+    MATCH "" -> GOTO ARG964;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG964 :
+    MATCH "" -> GOTO ARG965;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG965 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG966;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG966 :
+    MATCH "" -> GOTO ARG968;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG968 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG969;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG969 :
+    MATCH "x++;" -> GOTO ARG972_1_10;
+STATE USEFIRST ARG972_0_10 :
+    MATCH "x++;" -> GOTO ARG972_1_10;
+STATE USEFIRST ARG972_1_10 :
+    MATCH "x++;" -> GOTO ARG972_2_10;
+STATE USEFIRST ARG972_2_10 :
+    MATCH "x++;" -> GOTO ARG972_3_10;
+STATE USEFIRST ARG972_3_10 :
+    MATCH "y--;" -> GOTO ARG972_4_10;
+STATE USEFIRST ARG972_4_10 :
+    MATCH "y--;" -> GOTO ARG972_5_10;
+STATE USEFIRST ARG972_5_10 :
+    MATCH "y--;" -> GOTO ARG972_6_10;
+STATE USEFIRST ARG972_6_10 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG972;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG972 :
+    MATCH "[100 <= x + n]" -> GOTO ARG973;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG977;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG973 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG975;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG977;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG975 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG980;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG977 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG980;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG980 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG981;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG981 :
+    MATCH "" -> GOTO ARG982;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG982 :
+    MATCH "[!(!(cond))]" -> GOTO ARG984;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG984 :
+    MATCH "" -> GOTO ARG986;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG986 :
+    MATCH "" -> GOTO ARG987;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG987 :
+    MATCH "runtime_div = x/(n-y);" -> GOTO ARG988;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG988 :
+    MATCH "" -> GOTO ARG990;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG990 :
+    MATCH "[x+y <= 999999]" -> GOTO ARG991;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG991 :
+    MATCH "x++;" -> GOTO ARG994_1_11;
+STATE USEFIRST ARG994_0_11 :
+    MATCH "x++;" -> GOTO ARG994_1_11;
+STATE USEFIRST ARG994_1_11 :
+    MATCH "x++;" -> GOTO ARG994_2_11;
+STATE USEFIRST ARG994_2_11 :
+    MATCH "x++;" -> GOTO ARG994_3_11;
+STATE USEFIRST ARG994_3_11 :
+    MATCH "y--;" -> GOTO ARG994_4_11;
+STATE USEFIRST ARG994_4_11 :
+    MATCH "y--;" -> GOTO ARG994_5_11;
+STATE USEFIRST ARG994_5_11 :
+    MATCH "y--;" -> GOTO ARG994_6_11;
+STATE USEFIRST ARG994_6_11 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG994;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG994 :
+    MATCH "[100 <= x + n]" -> GOTO ARG995;
+    MATCH "[!(100 <= x + n)]" -> GOTO ARG999;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG995 :
+    MATCH "[x + n <= 0x7fffffff]" -> GOTO ARG997;
+    MATCH "[!(x + n <= 0x7fffffff)]" -> GOTO ARG999;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG997 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG1002;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG999 :
+    MATCH "100 <= x + n && x + n <= 0x7fffffff" -> GOTO ARG1002;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1002 :
+    MATCH "__VERIFIER_assert(100 <= x + n && x + n <= 0x7fffffff);" -> GOTO ARG1003;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1003 :
+    MATCH "" -> GOTO ARG1004;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1004 :
+    MATCH "[!(cond)]" -> GOTO ARG1005;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1005 :
+    MATCH "ERROR: {abort();}" -> ERROR;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG1008 :
+    TRUE -> STOP;
+
+END AUTOMATON

@@ -1,0 +1,17 @@
+digraph __VERIFIER_assert {
+11 [shape="circle" label="N11\n7"]
+12 [shape="diamond" label="N12\n6"]
+14 [shape="circle" label="N14\n5"]
+13 [shape="circle" label="N13\n1"]
+15 [shape="circle" label="N15\n4"]
+16 [shape="circle" label="N16\n3"]
+10 [shape="circle" label="N10\n0"]
+11 -> 12 [label="Function start dummy edge" fontname="Courier New"]
+12 -> 14 [label="[cond == 0]" fontname="Courier New"]
+12 -> 13 [label="[!(cond == 0)]" fontname="Courier New"]
+14 -> 15 [label="Label: ERROR" fontname="Courier New"]
+100004 [shape="component" label="reach_error"]
+15 -> 100004 [label="reach_error();" fontname="Courier New"]
+100004 -> 16 [label="" fontname="Courier New"]
+13 -> 10 [label="return;" fontname="Courier New"]
+}

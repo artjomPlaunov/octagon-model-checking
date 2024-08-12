@@ -1,0 +1,292 @@
+CONTROL AUTOMATON ErrorPath4
+
+INITIAL STATE ARG0;
+
+STATE USEFIRST ARG0 :
+    MATCH "" -> GOTO ARG44;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG44 :
+    MATCH "extern void abort(void);" -> GOTO ARG45_1_1;
+STATE USEFIRST ARG45_0_1 :
+    MATCH "extern void abort(void);" -> GOTO ARG45_1_1;
+STATE USEFIRST ARG45_1_1 :
+    MATCH "extern void __assert_fail(const char *, const char *, unsigned int, const char *) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));" -> GOTO ARG45_2_1;
+STATE USEFIRST ARG45_2_1 :
+    MATCH "void reach_error()" -> GOTO ARG45_3_1;
+STATE USEFIRST ARG45_3_1 :
+    MATCH "void assume_abort_if_not(int cond)" -> GOTO ARG45_4_1;
+STATE USEFIRST ARG45_4_1 :
+    MATCH "void __VERIFIER_assert(int cond)" -> GOTO ARG45_5_1;
+STATE USEFIRST ARG45_5_1 :
+    MATCH "extern void __VERIFIER_assume(int);" -> GOTO ARG45_6_1;
+STATE USEFIRST ARG45_6_1 :
+    MATCH "int __VERIFIER_nondet_int();" -> GOTO ARG45_7_1;
+STATE USEFIRST ARG45_7_1 :
+    MATCH "extern unsigned int __VERIFIER_nondet_uint(void);" -> GOTO ARG45_8_1;
+STATE USEFIRST ARG45_8_1 :
+    MATCH "int main()" -> GOTO ARG45_9_1;
+STATE USEFIRST ARG45_9_1 :
+    MATCH "" -> GOTO ARG45_10_1;
+STATE USEFIRST ARG45_10_1 :
+    MATCH "int flag = __VERIFIER_nondet_int();" -> GOTO ARG45_11_1;
+STATE USEFIRST ARG45_11_1 :
+    MATCH "int flag = __VERIFIER_nondet_int();" -> GOTO ARG45_12_1;
+STATE USEFIRST ARG45_12_1 :
+    MATCH "__VERIFIER_assume(flag == 0 || flag == 1);" -> GOTO ARG45;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG45 :
+    MATCH "[!(flag == 0)]" -> GOTO ARG47;
+    MATCH "[flag == 0]" -> GOTO ARG50;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG47 :
+    MATCH "[!(flag == 1)]" -> GOTO ARG49;
+    MATCH "[flag == 1]" -> GOTO ARG50;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG49 :
+    MATCH "flag == 0 || flag == 1" -> GOTO ARG53;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG50 :
+    MATCH "flag == 0 || flag == 1" -> GOTO ARG53;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG53 :
+    MATCH "[__VERIFIER_assume(flag == 0 || flag == 1);]" -> GOTO ARG54;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG54 :
+    MATCH "int i = 0;" -> GOTO ARG56_1_2;
+STATE USEFIRST ARG56_0_2 :
+    MATCH "int i = 0;" -> GOTO ARG56_1_2;
+STATE USEFIRST ARG56_1_2 :
+    MATCH "int x = 0;" -> GOTO ARG56_2_2;
+STATE USEFIRST ARG56_2_2 :
+    MATCH "int y = 0;" -> GOTO ARG56_3_2;
+STATE USEFIRST ARG56_3_2 :
+    MATCH "int n = __VERIFIER_nondet_int();" -> GOTO ARG56_4_2;
+STATE USEFIRST ARG56_4_2 :
+    MATCH "int n = __VERIFIER_nondet_int();" -> GOTO ARG56_5_2;
+STATE USEFIRST ARG56_5_2 :
+    MATCH "__VERIFIER_assume(n >= 1000 && n <= 1000000);" -> GOTO ARG56;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG56 :
+    MATCH "[n >= 1000]" -> GOTO ARG57;
+    MATCH "[!(n >= 1000)]" -> GOTO ARG61;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG57 :
+    MATCH "[n <= 1000000]" -> GOTO ARG59;
+    MATCH "[!(n <= 1000000)]" -> GOTO ARG61;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG59 :
+    MATCH "n >= 1000 && n <= 1000000" -> GOTO ARG64;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG61 :
+    MATCH "n >= 1000 && n <= 1000000" -> GOTO ARG64;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG64 :
+    MATCH "[__VERIFIER_assume(n >= 1000 && n <= 1000000);]" -> GOTO ARG65;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG65 :
+    MATCH "unsigned int a, b, r;" -> GOTO ARG67_1_3;
+STATE USEFIRST ARG67_0_3 :
+    MATCH "unsigned int a, b, r;" -> GOTO ARG67_1_3;
+STATE USEFIRST ARG67_1_3 :
+    MATCH "unsigned int a, b, r;" -> GOTO ARG67_2_3;
+STATE USEFIRST ARG67_2_3 :
+    MATCH "unsigned int a, b, r;" -> GOTO ARG67;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG67 :
+    MATCH "" -> GOTO ARG148;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG148 :
+    MATCH "[i < n]" -> GOTO ARG149;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG149 :
+    MATCH "__VERIFIER_assume(x <= 3000000 && y <= 2000000);" -> GOTO ARG168;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG168 :
+    MATCH "[x <= 3000000]" -> GOTO ARG169;
+    MATCH "[!(x <= 3000000)]" -> GOTO ARG173;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG169 :
+    MATCH "[y <= 2000000]" -> GOTO ARG171;
+    MATCH "[!(y <= 2000000)]" -> GOTO ARG173;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG171 :
+    MATCH "x <= 3000000 && y <= 2000000" -> GOTO ARG176;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG173 :
+    MATCH "x <= 3000000 && y <= 2000000" -> GOTO ARG176;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG176 :
+    MATCH "[__VERIFIER_assume(x <= 3000000 && y <= 2000000);]" -> GOTO ARG177;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG177 :
+    MATCH "x = x;" -> GOTO ARG179_1_4;
+STATE USEFIRST ARG179_0_4 :
+    MATCH "x = x;" -> GOTO ARG179_1_4;
+STATE USEFIRST ARG179_1_4 :
+    MATCH "y = y;" -> GOTO ARG179;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG179 :
+    MATCH "[!(flag)]" -> GOTO ARG180;
+    MATCH "[flag]" -> GOTO ARG181;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG180 :
+    MATCH "y += 2;" -> GOTO ARG184;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG181 :
+    MATCH "x += 3;" -> GOTO ARG182;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG182 :
+    MATCH "" -> GOTO ARG186;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG184 :
+    MATCH "" -> GOTO ARG186;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG186 :
+    MATCH "i += 1;" -> GOTO ARG187;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG187 :
+    MATCH "" -> GOTO ARG189;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG189 :
+    MATCH "[i < n]" -> GOTO ARG190;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG190 :
+    MATCH "__VERIFIER_assume(x <= 3000000 && y <= 2000000);" -> GOTO ARG209;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG209 :
+    MATCH "[x <= 3000000]" -> GOTO ARG210;
+    MATCH "[!(x <= 3000000)]" -> GOTO ARG214;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG210 :
+    MATCH "[y <= 2000000]" -> GOTO ARG212;
+    MATCH "[!(y <= 2000000)]" -> GOTO ARG214;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG212 :
+    MATCH "x <= 3000000 && y <= 2000000" -> GOTO ARG217;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG214 :
+    MATCH "x <= 3000000 && y <= 2000000" -> GOTO ARG217;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG217 :
+    MATCH "[__VERIFIER_assume(x <= 3000000 && y <= 2000000);]" -> GOTO ARG218;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG218 :
+    MATCH "x = x;" -> GOTO ARG220_1_5;
+STATE USEFIRST ARG220_0_5 :
+    MATCH "x = x;" -> GOTO ARG220_1_5;
+STATE USEFIRST ARG220_1_5 :
+    MATCH "y = y;" -> GOTO ARG220;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG220 :
+    MATCH "[!(flag)]" -> GOTO ARG221;
+    MATCH "[flag]" -> GOTO ARG222;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG221 :
+    MATCH "y += 2;" -> GOTO ARG225;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG222 :
+    MATCH "x += 3;" -> GOTO ARG223;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG223 :
+    MATCH "" -> GOTO ARG227;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG225 :
+    MATCH "" -> GOTO ARG227;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG227 :
+    MATCH "i += 1;" -> GOTO ARG228;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG228 :
+    MATCH "" -> GOTO ARG230;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG230 :
+    MATCH "[!(i < n)]" -> GOTO ARG232;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG232 :
+    MATCH "__VERIFIER_assert(x <= 3000003 && y <= 2000002);" -> GOTO ARG233;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG233 :
+    MATCH "[x <= 3000003]" -> GOTO ARG234;
+    MATCH "[!(x <= 3000003)]" -> GOTO ARG238;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG234 :
+    MATCH "[y <= 2000002]" -> GOTO ARG236;
+    MATCH "[!(y <= 2000002)]" -> GOTO ARG238;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG236 :
+    MATCH "x <= 3000003 && y <= 2000002" -> GOTO ARG241;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG238 :
+    MATCH "x <= 3000003 && y <= 2000002" -> GOTO ARG241;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG241 :
+    MATCH "__VERIFIER_assert(x <= 3000003 && y <= 2000002);" -> GOTO ARG242;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG242 :
+    MATCH "" -> GOTO ARG243;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG243 :
+    MATCH "[!(cond)]" -> GOTO ARG244;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG244 :
+    MATCH "ERROR: {reach_error();abort();}" -> ERROR;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG247 :
+    TRUE -> STOP;
+
+END AUTOMATON

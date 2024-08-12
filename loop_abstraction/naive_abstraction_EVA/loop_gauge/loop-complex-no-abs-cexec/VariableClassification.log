@@ -1,0 +1,39 @@
+IntBool
+
+[assume_abort_if_not::cond]
+
+IntEq
+
+[main::__CPAchecker_TMP_1, main::flag, main::__CPAchecker_TMP_0]
+
+IntAdd
+
+[main::n, main::i, main::y, mp_add::i, main::x, mp_add::na, mp_add::nb]
+
+IntOverflow
+
+[mp_add::r, mp_add::r0, mp_add::partial_sum, mp_add::r3, mp_add::r1, mp_add::r2, mp_add::i, main::b, main::a, mp_add::b0, mp_add::__retval__, main::__CPAchecker_TMP_2, main::n, mp_add::b3, mp_add::b1, main::i, mp_add::b2, main::x, __VERIFIER_assert::cond, main::r, mp_add::carry, main::y, mp_add::a, mp_add::b, mp_add::a2, mp_add::a3, mp_add::a0, mp_add::a1, mp_add::na, mp_add::nb]
+
+ALL
+
+[mp_add::r0, mp_add::r, mp_add::partial_sum, mp_add::r3, mp_add::r1, mp_add::r2, mp_add::i, main::b, main::a, mp_add::__retval__, mp_add::b0, main::n, main::__CPAchecker_TMP_2, main::__CPAchecker_TMP_1, main::__CPAchecker_TMP_0, mp_add::b3, mp_add::b1, main::i, mp_add::b2, main::x, __VERIFIER_assert::cond, assume_abort_if_not::cond, main::r, mp_add::carry, main::y, mp_add::a, mp_add::b, main::flag, mp_add::a2, mp_add::a3, mp_add::a0, mp_add::a1, mp_add::na, mp_add::nb]
+
+DEPENDENCIES
+
+[[__VERIFIER_assert::cond, main::__CPAchecker_TMP_2, main::a, main::b, main::r, mp_add::__retval__, mp_add::a, mp_add::a0, mp_add::a1, mp_add::a2, mp_add::a3, mp_add::b, mp_add::b0, mp_add::b1, mp_add::b2, mp_add::b3, mp_add::carry, mp_add::partial_sum, mp_add::r, mp_add::r0, mp_add::r1, mp_add::r2, mp_add::r3] --> [0, 1, 8, 16, 24, 255, 234770789],
+[assume_abort_if_not::cond] --> [0],
+[main::flag] --> [0, 1],
+[main::__CPAchecker_TMP_0] --> [0, 1],
+[main::i, main::n] --> [0, 1, 1000, 1000000],
+[main::x] --> [0, 3, 3000003],
+[main::y] --> [0, 2, 2000002],
+[main::__CPAchecker_TMP_1] --> [0, 1],
+[mp_add::i, mp_add::na, mp_add::nb] --> [0, 1, 2, 3, 4]]
+
+RELEVANT VARS
+
+[mp_add::r, mp_add::r0, mp_add::partial_sum, mp_add::r3, mp_add::r1, mp_add::r2, mp_add::i, main::b, main::a, mp_add::b0, mp_add::__retval__, main::n, main::__CPAchecker_TMP_2, main::__CPAchecker_TMP_1, mp_add::b3, main::__CPAchecker_TMP_0, mp_add::b1, mp_add::b2, main::i, main::x, __VERIFIER_assert::cond, assume_abort_if_not::cond, mp_add::carry, main::r, main::y, mp_add::a, mp_add::b, main::flag, mp_add::a2, mp_add::a3, mp_add::a0, mp_add::a1, mp_add::na, mp_add::nb]
+
+RELEVANT FIELDS
+
+{}

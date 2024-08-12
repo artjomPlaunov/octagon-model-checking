@@ -1,0 +1,346 @@
+CONTROL AUTOMATON ErrorPath9
+
+INITIAL STATE ARG0;
+
+STATE USEFIRST ARG0 :
+    MATCH "" -> GOTO ARG17;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG17 :
+    MATCH "extern void abort(void);" -> GOTO ARG18_1_1;
+STATE USEFIRST ARG18_0_1 :
+    MATCH "extern void abort(void);" -> GOTO ARG18_1_1;
+STATE USEFIRST ARG18_1_1 :
+    MATCH "extern void __assert_fail(const char *, const char *, unsigned int,\n                          const char *) __attribute__((__nothrow__, __leaf__))\n__attribute__((__noreturn__));" -> GOTO ARG18_2_1;
+STATE USEFIRST ARG18_2_1 :
+    MATCH "void reach_error()" -> GOTO ARG18_3_1;
+STATE USEFIRST ARG18_3_1 :
+    MATCH "void assume_abort_if_not(int cond)" -> GOTO ARG18_4_1;
+STATE USEFIRST ARG18_4_1 :
+    MATCH "void __VERIFIER_assert(int cond)" -> GOTO ARG18_5_1;
+STATE USEFIRST ARG18_5_1 :
+    MATCH "int SIZE = 2000000;" -> GOTO ARG18_6_1;
+STATE USEFIRST ARG18_6_1 :
+    MATCH "int __VERIFIER_nondet_int();" -> GOTO ARG18_7_1;
+STATE USEFIRST ARG18_7_1 :
+    MATCH "int main()" -> GOTO ARG18_8_1;
+STATE USEFIRST ARG18_8_1 :
+    MATCH "" -> GOTO ARG18_9_1;
+STATE USEFIRST ARG18_9_1 :
+    MATCH "unsigned int n, i, j, l = 0;" -> GOTO ARG18_10_1;
+STATE USEFIRST ARG18_10_1 :
+    MATCH "unsigned int n, i, j, l = 0;" -> GOTO ARG18_11_1;
+STATE USEFIRST ARG18_11_1 :
+    MATCH "unsigned int n, i, j, l = 0;" -> GOTO ARG18_12_1;
+STATE USEFIRST ARG18_12_1 :
+    MATCH "unsigned int n, i, j, l = 0;" -> GOTO ARG18_13_1;
+STATE USEFIRST ARG18_13_1 :
+    MATCH "n = SIZE;" -> GOTO ARG18;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG18 :
+    MATCH "[n <= SIZE]" -> GOTO ARG19;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG19 :
+    MATCH "i = 0;" -> GOTO ARG22_1_2;
+STATE USEFIRST ARG22_0_2 :
+    MATCH "i = 0;" -> GOTO ARG22_1_2;
+STATE USEFIRST ARG22_1_2 :
+    MATCH "j = 0;" -> GOTO ARG22_2_2;
+STATE USEFIRST ARG22_2_2 :
+    MATCH "l = 0;" -> GOTO ARG22;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG22 :
+    MATCH "" -> GOTO ARG534;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG534 :
+    MATCH "[l < n]" -> GOTO ARG535;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG535 :
+    MATCH "[!(l % 2)]" -> GOTO ARG545;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG546;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG545 :
+    MATCH "i = i + 1;" -> GOTO ARG549;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG546 :
+    MATCH "j = j + 1;" -> GOTO ARG547;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG547 :
+    MATCH "" -> GOTO ARG551;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG549 :
+    MATCH "" -> GOTO ARG551;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG551 :
+    MATCH "l = l + 1;" -> GOTO ARG552;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG552 :
+    MATCH "" -> GOTO ARG554;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG554 :
+    MATCH "[l < n]" -> GOTO ARG555;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG555 :
+    MATCH "[!(l % 2)]" -> GOTO ARG565;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG566;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG565 :
+    MATCH "i = i + 1;" -> GOTO ARG569;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG566 :
+    MATCH "j = j + 1;" -> GOTO ARG567;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG567 :
+    MATCH "" -> GOTO ARG571;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG569 :
+    MATCH "" -> GOTO ARG571;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG571 :
+    MATCH "l = l + 1;" -> GOTO ARG572;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG572 :
+    MATCH "" -> GOTO ARG574;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG574 :
+    MATCH "[l < n]" -> GOTO ARG575;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG575 :
+    MATCH "[!(l % 2)]" -> GOTO ARG585;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG586;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG585 :
+    MATCH "i = i + 1;" -> GOTO ARG589;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG586 :
+    MATCH "j = j + 1;" -> GOTO ARG587;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG587 :
+    MATCH "" -> GOTO ARG591;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG589 :
+    MATCH "" -> GOTO ARG591;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG591 :
+    MATCH "l = l + 1;" -> GOTO ARG592;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG592 :
+    MATCH "" -> GOTO ARG594;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG594 :
+    MATCH "[l < n]" -> GOTO ARG595;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG595 :
+    MATCH "[!(l % 2)]" -> GOTO ARG605;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG606;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG605 :
+    MATCH "i = i + 1;" -> GOTO ARG609;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG606 :
+    MATCH "j = j + 1;" -> GOTO ARG607;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG607 :
+    MATCH "" -> GOTO ARG611;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG609 :
+    MATCH "" -> GOTO ARG611;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG611 :
+    MATCH "l = l + 1;" -> GOTO ARG612;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG612 :
+    MATCH "" -> GOTO ARG614;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG614 :
+    MATCH "[l < n]" -> GOTO ARG615;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG615 :
+    MATCH "[!(l % 2)]" -> GOTO ARG625;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG626;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG625 :
+    MATCH "i = i + 1;" -> GOTO ARG629;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG626 :
+    MATCH "j = j + 1;" -> GOTO ARG627;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG627 :
+    MATCH "" -> GOTO ARG631;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG629 :
+    MATCH "" -> GOTO ARG631;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG631 :
+    MATCH "l = l + 1;" -> GOTO ARG632;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG632 :
+    MATCH "" -> GOTO ARG634;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG634 :
+    MATCH "[l < n]" -> GOTO ARG635;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG635 :
+    MATCH "[!(l % 2)]" -> GOTO ARG645;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG646;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG645 :
+    MATCH "i = i + 1;" -> GOTO ARG649;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG646 :
+    MATCH "j = j + 1;" -> GOTO ARG647;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG647 :
+    MATCH "" -> GOTO ARG651;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG649 :
+    MATCH "" -> GOTO ARG651;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG651 :
+    MATCH "l = l + 1;" -> GOTO ARG652;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG652 :
+    MATCH "" -> GOTO ARG654;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG654 :
+    MATCH "[l < n]" -> GOTO ARG655;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG655 :
+    MATCH "[!(l % 2)]" -> GOTO ARG665;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG666;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG665 :
+    MATCH "i = i + 1;" -> GOTO ARG669;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG666 :
+    MATCH "j = j + 1;" -> GOTO ARG667;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG667 :
+    MATCH "" -> GOTO ARG671;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG669 :
+    MATCH "" -> GOTO ARG671;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG671 :
+    MATCH "l = l + 1;" -> GOTO ARG672;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG672 :
+    MATCH "" -> GOTO ARG674;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG674 :
+    MATCH "[l < n]" -> GOTO ARG675;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG675 :
+    MATCH "[!(l % 2)]" -> GOTO ARG685;
+    MATCH "[!(!(l % 2))]" -> GOTO ARG686;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG685 :
+    MATCH "i = i + 1;" -> GOTO ARG689;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG686 :
+    MATCH "j = j + 1;" -> GOTO ARG687;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG687 :
+    MATCH "" -> GOTO ARG691;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG689 :
+    MATCH "" -> GOTO ARG691;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG691 :
+    MATCH "l = l + 1;" -> GOTO ARG692;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG692 :
+    MATCH "" -> GOTO ARG694;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG694 :
+    MATCH "[!(l < n)]" -> GOTO ARG696;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG696 :
+    MATCH "__VERIFIER_assert((i + j) == 2000000);" -> GOTO ARG697;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG697 :
+    MATCH "" -> GOTO ARG698;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG698 :
+    MATCH "[!(cond)]" -> GOTO ARG699;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG699 :
+    MATCH "ERROR: {\n    reach_error();\n    abort();\n  }" -> ERROR;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG702 :
+    TRUE -> STOP;
+
+END AUTOMATON

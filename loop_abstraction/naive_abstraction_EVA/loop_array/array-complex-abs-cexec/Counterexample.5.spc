@@ -1,0 +1,124 @@
+CONTROL AUTOMATON ErrorPath5
+
+INITIAL STATE ARG0;
+
+STATE USEFIRST ARG0 :
+    MATCH "" -> GOTO ARG13;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG13 :
+    MATCH "extern void abort(void);" -> GOTO ARG14_1_1;
+STATE USEFIRST ARG14_0_1 :
+    MATCH "extern void abort(void);" -> GOTO ARG14_1_1;
+STATE USEFIRST ARG14_1_1 :
+    MATCH "extern void __assert_fail(const char *, const char *, unsigned int, const char *) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));" -> GOTO ARG14_2_1;
+STATE USEFIRST ARG14_2_1 :
+    MATCH "void reach_error()" -> GOTO ARG14_3_1;
+STATE USEFIRST ARG14_3_1 :
+    MATCH "void assume_abort_if_not(int cond)" -> GOTO ARG14_4_1;
+STATE USEFIRST ARG14_4_1 :
+    MATCH "void __VERIFIER_assert(int cond)" -> GOTO ARG14_5_1;
+STATE USEFIRST ARG14_5_1 :
+    MATCH "extern void __VERIFIER_assume(int);" -> GOTO ARG14_6_1;
+STATE USEFIRST ARG14_6_1 :
+    MATCH "int __VERIFIER_nondet_int();" -> GOTO ARG14_7_1;
+STATE USEFIRST ARG14_7_1 :
+    MATCH "extern unsigned int __VERIFIER_nondet_uint(void);" -> GOTO ARG14_8_1;
+STATE USEFIRST ARG14_8_1 :
+    MATCH "int main(void)" -> GOTO ARG14_9_1;
+STATE USEFIRST ARG14_9_1 :
+    MATCH "" -> GOTO ARG14_10_1;
+STATE USEFIRST ARG14_10_1 :
+    MATCH "int A[2048] = {0};" -> GOTO ARG14_11_1;
+STATE USEFIRST ARG14_11_1 :
+    MATCH "int B[2048] = {0};" -> GOTO ARG14_12_1;
+STATE USEFIRST ARG14_12_1 :
+    MATCH "int i;" -> GOTO ARG14_13_1;
+STATE USEFIRST ARG14_13_1 :
+    MATCH "int tmp;" -> GOTO ARG14_14_1;
+STATE USEFIRST ARG14_14_1 :
+    MATCH "i = 0;" -> GOTO ARG14;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG14 :
+    MATCH "" -> GOTO ARG85;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG85 :
+    MATCH "[i < 2048]" -> GOTO ARG86;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG86 :
+    MATCH "tmp = A[i];" -> GOTO ARG96_1_2;
+STATE USEFIRST ARG96_0_2 :
+    MATCH "tmp = A[i];" -> GOTO ARG96_1_2;
+STATE USEFIRST ARG96_1_2 :
+    MATCH "B[i] = tmp;" -> GOTO ARG96_2_2;
+STATE USEFIRST ARG96_2_2 :
+    MATCH "i += 1;" -> GOTO ARG96;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG96 :
+    MATCH "" -> GOTO ARG98;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG98 :
+    MATCH "[i < 2048]" -> GOTO ARG99;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG99 :
+    MATCH "tmp = A[i];" -> GOTO ARG109_1_3;
+STATE USEFIRST ARG109_0_3 :
+    MATCH "tmp = A[i];" -> GOTO ARG109_1_3;
+STATE USEFIRST ARG109_1_3 :
+    MATCH "B[i] = tmp;" -> GOTO ARG109_2_3;
+STATE USEFIRST ARG109_2_3 :
+    MATCH "i += 1;" -> GOTO ARG109;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG109 :
+    MATCH "" -> GOTO ARG111;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG111 :
+    MATCH "[i < 2048]" -> GOTO ARG112;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG112 :
+    MATCH "tmp = A[i];" -> GOTO ARG122_1_4;
+STATE USEFIRST ARG122_0_4 :
+    MATCH "tmp = A[i];" -> GOTO ARG122_1_4;
+STATE USEFIRST ARG122_1_4 :
+    MATCH "B[i] = tmp;" -> GOTO ARG122_2_4;
+STATE USEFIRST ARG122_2_4 :
+    MATCH "i += 1;" -> GOTO ARG122;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG122 :
+    MATCH "" -> GOTO ARG124;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG124 :
+    MATCH "[!(i < 2048)]" -> GOTO ARG126;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG126 :
+    MATCH "__VERIFIER_assert(A[1024] == B[1024]);" -> GOTO ARG127;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG127 :
+    MATCH "" -> GOTO ARG128;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG128 :
+    MATCH "[!(cond)]" -> GOTO ARG129;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG129 :
+    MATCH "ERROR: {reach_error();abort();}" -> ERROR;
+    TRUE -> STOP;
+
+STATE USEFIRST ARG132 :
+    TRUE -> STOP;
+
+END AUTOMATON

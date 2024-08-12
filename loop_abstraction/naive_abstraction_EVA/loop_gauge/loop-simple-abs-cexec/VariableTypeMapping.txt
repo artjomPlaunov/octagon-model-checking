@@ -1,0 +1,14 @@
+main::y	4
+main::b	7
+main::a	7
+main::__CPAchecker_TMP_3	6
+main::n	4
+main::__CPAchecker_TMP_2	6
+main::flag	6
+main::__CPAchecker_TMP_1	6
+main::__CPAchecker_TMP_0	6
+main::i	4
+main::x	4
+__VERIFIER_assert::cond	6
+assume_abort_if_not::cond	7
+main::r	7

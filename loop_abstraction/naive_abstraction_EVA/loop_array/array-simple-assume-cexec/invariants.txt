@@ -1,0 +1,6 @@
+loop__main__30:
+(set-info :source |printed by MathSAT|)
+(declare-fun |__ADDRESS_OF_main::A@| () (_ BitVec 32))
+(declare-fun |__ADDRESS_OF_main::B@| () (_ BitVec 32))
+(declare-fun *int () (Array (_ BitVec 32) (_ BitVec 32)))
+(assert (let ((.def_3856 (bvadd (_ bv4096 32) |__ADDRESS_OF_main::A@|)))(let ((.def_32333 (store *int .def_3856 (_ bv0 32))))(let ((.def_32334 (= *int .def_32333)))(let ((.def_15897 (bvadd (_ bv4096 32) |__ADDRESS_OF_main::B@|)))(let ((.def_32330 (store *int .def_15897 (_ bv0 32))))(let ((.def_32331 (= *int .def_32330)))(let ((.def_34388 (and .def_32331 .def_32334))).def_34388))))))))

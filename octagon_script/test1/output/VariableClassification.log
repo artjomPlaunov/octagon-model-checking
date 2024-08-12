@@ -1,0 +1,33 @@
+IntBool
+
+[main::__retval__]
+
+IntEq
+
+[main::__CPAchecker_TMP_2, __VERIFIER_assert::cond]
+
+IntAdd
+
+[]
+
+IntOverflow
+
+[main::n, main::__CPAchecker_TMP_1, main::runtime_div, main::__CPAchecker_TMP_0, main::y, main::x]
+
+ALL
+
+[main::n, main::__CPAchecker_TMP_2, main::__CPAchecker_TMP_1, main::runtime_div, main::__CPAchecker_TMP_0, main::y, main::x, main::__retval__, __VERIFIER_assert::cond]
+
+DEPENDENCIES
+
+[[__VERIFIER_assert::cond, main::__CPAchecker_TMP_2] --> [0, 1],
+[main::__CPAchecker_TMP_0, main::__CPAchecker_TMP_1, main::n, main::runtime_div, main::x, main::y] --> [0, 1, 100, 999999, 1000000, 2147483647],
+[main::__retval__] --> [0]]
+
+RELEVANT VARS
+
+[main::x, main::n, main::__CPAchecker_TMP_2, __VERIFIER_assert::cond, main::y]
+
+RELEVANT FIELDS
+
+{}

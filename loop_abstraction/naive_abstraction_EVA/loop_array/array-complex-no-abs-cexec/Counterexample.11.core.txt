@@ -1,0 +1,47 @@
+line 101:	N144 -{int r;}-> N145
+line 106:	N149 -{i = 0;}-> N150
+line 107:	N150 -{while}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[!(i < 2048)]}-> N153
+line 115:	N153 -{a = __VERIFIER_nondet_uint();}-> N157
+line 116:	N157 -{b = 234770789;}-> N158
+line 117:	N158 -{mp_add(a, b)}-> N20
+line 31:	N42 -{a3 = a >> 24U;}-> N43
+line 35:	N46 -{b3 = b >> 24U;}-> N47
+line 36:	N47 -{na = 4U;}-> N48
+line 37:	N48 -{[!(a3 == 0U)]}-> N49
+line 46:	N49 -{nb = 4U;}-> N58
+line 47:	N58 -{[!(b3 == 0U)]}-> N59
+line 56:	N59 -{carry = 0U;}-> N68
+line 57:	N68 -{i = 0U;}-> N69
+line 58:	N69 -{while}-> N70
+line 58:	N70 -{[i < na]}-> N71
+line 59:	N71 -{partial_sum = carry;}-> N75
+line 60:	N75 -{carry = 0U;}-> N76
+line 61:	N76 -{[!(i < na)]}-> N77
+line 67:	N77 -{[!(i < nb)]}-> N91
+line 73:	N91 -{[!(partial_sum > 255U)]}-> N105
+line 77:	N105 -{[!(i == 0U)]}-> N109
+line 78:	N109 -{[!(i == 1U)]}-> N112
+line 79:	N112 -{[!(i == 2U)]}-> N115
+line 80:	N115 -{[!(i == 3U)]}-> N118
+line 82:	N118 -{i = i + 1U;}-> N121
+none:	N121 -{}-> N70
+line 58:	N70 -{[!(i < na)]}-> N74
+line 58:	N74 -{[!(i < nb)]}-> N73
+line 58:	N73 -{[!(carry != 0U)]}-> N72
+line 85:	N72 -{while}-> N122
+line 85:	N122 -{[!(i < 4U)]}-> N124
+line 119:	N159 -{__VERIFIER_assert(r == (a + b))}-> N11
+line 9:	N12 -{[cond == 0]}-> N14

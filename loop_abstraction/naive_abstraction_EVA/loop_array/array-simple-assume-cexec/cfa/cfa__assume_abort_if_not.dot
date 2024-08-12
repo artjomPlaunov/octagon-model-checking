@@ -1,0 +1,13 @@
+digraph assume_abort_if_not {
+5 [shape="circle" label="N5\n5"]
+6 [shape="diamond" label="N6\n4"]
+8 [shape="circle" label="N8\n3"]
+7 [shape="circle" label="N7\n1"]
+53 [shape="circle" label="N53\n0"]
+4 [shape="circle" label="N4\n0"]
+5 -> 6 [label="Function start dummy edge" fontname="Courier New"]
+6 -> 8 [label="[cond == 0]" fontname="Courier New"]
+6 -> 7 [label="[!(cond == 0)]" fontname="Courier New"]
+8 -> 53 [label="abort();" fontname="Courier New"]
+7 -> 4 [label="default return" fontname="Courier New"]
+}

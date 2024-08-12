@@ -1,0 +1,114 @@
+none:	N141 -{INIT GLOBAL VARS}-> N162
+line 1:	N162 -{void abort();}-> N163
+line 2:	N163 -{void __assert_fail(const char *, const char *, unsigned int, const char *);}-> N164
+line 3:	N164 -{void reach_error();}-> N165
+lines 5-7:	N165 -{void assume_abort_if_not(int cond);}-> N166
+lines 8-13:	N166 -{void __VERIFIER_assert(int cond);}-> N167
+line 14:	N167 -{void __VERIFIER_assume(int);}-> N168
+line 15:	N168 -{int __VERIFIER_nondet_int();}-> N169
+line 16:	N169 -{unsigned int __VERIFIER_nondet_uint();}-> N170
+lines 18-97:	N170 -{unsigned int mp_add(unsigned int a, unsigned int b);}-> N171
+lines 100-121:	N171 -{int main();}-> N172
+none:	N172 -{Function start dummy edge}-> N142
+line 101:	N142 -{int a;}-> N143
+line 101:	N143 -{int b;}-> N144
+line 101:	N144 -{int r;}-> N145
+line 102:	N145 -{int A[2048] = { 0 };}-> N146
+line 103:	N146 -{int B[2048] = { 0 };}-> N147
+line 104:	N147 -{int i;}-> N148
+line 105:	N148 -{int tmp;}-> N149
+line 106:	N149 -{i = 0;}-> N150
+line 107:	N150 -{while}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 109:	N152 -{tmp = A[i];}-> N154
+line 110:	N154 -{B[i] = tmp;}-> N155
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 109:	N152 -{tmp = A[i];}-> N154
+line 110:	N154 -{B[i] = tmp;}-> N155
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[i < 2048]}-> N152
+line 109:	N152 -{tmp = A[i];}-> N154
+line 110:	N154 -{B[i] = tmp;}-> N155
+line 111:	N155 -{i = i + 1;}-> N156
+none:	N156 -{}-> N151
+line 107:	N151 -{[!(i < 2048)]}-> N153
+line 115:	N153 -{a = __VERIFIER_nondet_uint();}-> N157
+line 116:	N157 -{b = 234770789;}-> N158
+line 117:	N158 -{mp_add(a, b)}-> N20
+none:	N20 -{Function start dummy edge}-> N21
+line 20:	N21 -{unsigned char a0;}-> N22
+line 20:	N22 -{unsigned char a1;}-> N23
+line 20:	N23 -{unsigned char a2;}-> N24
+line 20:	N24 -{unsigned char a3;}-> N25
+line 21:	N25 -{unsigned char b0;}-> N26
+line 21:	N26 -{unsigned char b1;}-> N27
+line 21:	N27 -{unsigned char b2;}-> N28
+line 21:	N28 -{unsigned char b3;}-> N29
+line 22:	N29 -{unsigned char r0;}-> N30
+line 22:	N30 -{unsigned char r1;}-> N31
+line 22:	N31 -{unsigned char r2;}-> N32
+line 22:	N32 -{unsigned char r3;}-> N33
+line 23:	N33 -{unsigned short carry;}-> N34
+line 24:	N34 -{unsigned short partial_sum;}-> N35
+line 25:	N35 -{unsigned int r;}-> N36
+line 26:	N36 -{unsigned char i;}-> N37
+line 27:	N37 -{unsigned char na;}-> N38
+line 27:	N38 -{unsigned char nb;}-> N39
+line 28:	N39 -{a0 = a;}-> N40
+line 29:	N40 -{a1 = a >> 8;}-> N41
+line 30:	N41 -{a2 = a >> 16U;}-> N42
+line 31:	N42 -{a3 = a >> 24U;}-> N43
+line 32:	N43 -{b0 = b;}-> N44
+line 33:	N44 -{b1 = b >> 8U;}-> N45
+line 34:	N45 -{b2 = b >> 16U;}-> N46
+line 35:	N46 -{b3 = b >> 24U;}-> N47
+line 36:	N47 -{na = 4U;}-> N48
+line 37:	N48 -{[!(a3 == 0U)]}-> N49
+line 46:	N49 -{nb = 4U;}-> N58
+line 47:	N58 -{[!(b3 == 0U)]}-> N59
+line 56:	N59 -{carry = 0U;}-> N68
+line 57:	N68 -{i = 0U;}-> N69
+line 58:	N69 -{while}-> N70
+line 58:	N70 -{[!(i < na)]}-> N74
+line 58:	N74 -{[!(i < nb)]}-> N73
+line 58:	N73 -{[!(carry != 0U)]}-> N72
+line 85:	N72 -{while}-> N122
+line 85:	N122 -{[i < 4U]}-> N123
+line 86:	N123 -{[!(i == 0U)]}-> N125
+line 87:	N125 -{[!(i == 1U)]}-> N128
+line 88:	N128 -{[!(i == 2U)]}-> N131
+line 89:	N131 -{[!(i == 3U)]}-> N134
+line 91:	N134 -{i = i + 1U;}-> N137
+none:	N137 -{}-> N122
+line 85:	N122 -{[i < 4U]}-> N123
+line 86:	N123 -{[!(i == 0U)]}-> N125
+line 87:	N125 -{[!(i == 1U)]}-> N128
+line 88:	N128 -{[!(i == 2U)]}-> N131
+line 89:	N131 -{[!(i == 3U)]}-> N134
+line 91:	N134 -{i = i + 1U;}-> N137
+none:	N137 -{}-> N122
+line 85:	N122 -{[i < 4U]}-> N123
+line 86:	N123 -{[!(i == 0U)]}-> N125
+line 87:	N125 -{[!(i == 1U)]}-> N128
+line 88:	N128 -{[!(i == 2U)]}-> N131
+line 89:	N131 -{[!(i == 3U)]}-> N134
+line 91:	N134 -{i = i + 1U;}-> N137
+none:	N137 -{}-> N122
+line 85:	N122 -{[i < 4U]}-> N123
+line 86:	N123 -{[!(i == 0U)]}-> N125
+line 87:	N125 -{[!(i == 1U)]}-> N128
+line 88:	N128 -{[!(i == 2U)]}-> N131
+line 89:	N131 -{[!(i == 3U)]}-> N134
+line 91:	N134 -{i = i + 1U;}-> N137
+none:	N137 -{}-> N122
+line 85:	N122 -{[!(i < 4U)]}-> N124
+line 94:	N124 -{r = ((r0 | (r1 << 8U)) | (r2 << 16U)) | (((unsigned int)r3) << 24U);}-> N138
+line 96:	N138 -{return r;}-> N19
+line 117:	N19 -{Return edge from mp_add to main: r = mp_add(a, b);}-> N159
+line 119:	N159 -{__VERIFIER_assert(r == (a + b))}-> N11
+none:	N11 -{Function start dummy edge}-> N12
+line 9:	N12 -{[cond == 0]}-> N14
+line 10:	N14 -{Label: ERROR}-> N15

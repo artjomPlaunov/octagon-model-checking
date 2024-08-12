@@ -1,0 +1,42 @@
+IntBool
+
+[assume_abort_if_not::cond, main::b, main::r, main::a]
+
+IntEq
+
+[main::__CPAchecker_TMP_3, main::__CPAchecker_TMP_2, main::flag, main::__CPAchecker_TMP_1, main::__CPAchecker_TMP_0, __VERIFIER_assert::cond]
+
+IntAdd
+
+[main::n, main::y, main::i, main::x]
+
+IntOverflow
+
+[main::n, main::i, main::y, main::x]
+
+ALL
+
+[main::y, main::b, main::a, main::__CPAchecker_TMP_3, main::n, main::__CPAchecker_TMP_2, main::flag, main::__CPAchecker_TMP_1, main::__CPAchecker_TMP_0, main::i, main::x, __VERIFIER_assert::cond, assume_abort_if_not::cond, main::r]
+
+DEPENDENCIES
+
+[[__VERIFIER_assert::cond, main::__CPAchecker_TMP_3] --> [0, 1],
+[assume_abort_if_not::cond] --> [0],
+[main::flag] --> [0, 1],
+[main::__CPAchecker_TMP_0] --> [0, 1],
+[main::i, main::n] --> [0, 1, 1000, 1000000],
+[main::x] --> [0, 3, 3000000, 3000003],
+[main::y] --> [0, 2, 2000000, 2000002],
+[main::__CPAchecker_TMP_1] --> [0, 1],
+[main::a] --> [],
+[main::b] --> [],
+[main::r] --> [],
+[main::__CPAchecker_TMP_2] --> [0, 1]]
+
+RELEVANT VARS
+
+[main::__CPAchecker_TMP_3, main::__CPAchecker_TMP_2, main::n, main::flag, main::__CPAchecker_TMP_1, main::__CPAchecker_TMP_0, main::y, main::i, main::x, __VERIFIER_assert::cond, assume_abort_if_not::cond]
+
+RELEVANT FIELDS
+
+{}

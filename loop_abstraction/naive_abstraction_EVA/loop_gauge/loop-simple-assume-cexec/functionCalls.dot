@@ -1,0 +1,15 @@
+digraph functioncalls {
+rankdir=LR;
+
+main [shape="box", color=blue];
+reach_error [label="reach_error", ];
+__VERIFIER_assert -> reach_error;
+abort [label="abort", shape="box", color=grey];
+assume_abort_if_not -> abort;
+__VERIFIER_nondet_int [label="__VERIFIER_nondet_int", shape="box", color=grey];
+main -> __VERIFIER_nondet_int;
+__VERIFIER_assert [label="__VERIFIER_assert", ];
+main -> __VERIFIER_assert;
+__assert_fail [label="__assert_fail", shape="box", color=grey];
+reach_error -> __assert_fail;
+}

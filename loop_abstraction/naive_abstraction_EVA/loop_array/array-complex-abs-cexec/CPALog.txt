@@ -1,0 +1,18 @@
+2024-07-24 16:36:52:586	INFO	CPAMain.detectFrontendLanguageIfNecessary	Language C detected and set for analysis
+
+2024-07-24 16:36:52:606	INFO	ResourceLimitChecker.fromConfiguration	Using the following resource limits: CPU-time limit of 900s
+
+2024-07-24 16:36:52:659	INFO	CPAchecker.run	CPAchecker 2.3 / predicateAnalysis (OpenJDK 64-Bit Server VM 17.0.10) started
+
+2024-07-24 16:36:52:671	INFO	CPAchecker.parse	Parsing CFA from file(s) "array-simple-no-abs.c"
+
+2024-07-24 16:36:54:124	INFO	PredicateCPA:PredicateCPA.<init>	Using predicate analysis with MathSAT5 version 5.6.10 (9293adc746be) (May 31 2023 12:38:06, gmp 6.2.0, gcc 7.5.0, 64-bit, reentrant) and JFactory 1.21.
+
+2024-07-24 16:36:54:267	INFO	PredicateCPA:PredicateCPARefiner.<init>	Using refinement for predicate analysis with PredicateAbstractionRefinementStrategy strategy.
+
+2024-07-24 16:36:54:285	INFO	CPAchecker.runAlgorithm	Starting analysis ...
+
+2024-07-24 16:51:38:701	WARNING	ForceTerminationOnShutdown$1.shutdownRequested	Shutdown requested (The CPU-time limit of 900s has elapsed.), waiting for termination.
+
+2024-07-24 16:51:38:766	WARNING	ShutdownNotifier.shutdownIfNecessary	Warning: Analysis interrupted (The CPU-time limit of 900s has elapsed.)
+
