@@ -1,7 +1,0 @@
-digraph reach_error {
-1 [shape="circle" label="N1\n3"]
-2 [shape="circle" label="N2\n2"]
-201 [shape="circle" label="N201\n0"]
-1 -> 2 [label="Function start dummy edge" fontname="Courier New"]
-2 -> 201 [label="__assert_fail(\"0\", \"sumt2.c\", 3, \"reach_error\");" fontname="Courier New"]
-}

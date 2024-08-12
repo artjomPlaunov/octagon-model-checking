@@ -1,6 +1,0 @@
-digraph ARG {
-node [style="filled" shape="box" color="white"]
-0 [fillcolor="cornflowerblue" label="0 @ N141\nmain entry\nAbstractionState: ABS0: true\n" id="0"]
-212 [label="212 @ N20\nmp_add entry\n" id="212"]
-0 -> 212 []
-}

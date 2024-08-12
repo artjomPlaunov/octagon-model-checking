@@ -1,8 +1,0 @@
-(set-info :source |printed by MathSAT|)
-
-mp_add N70:
-(assert false)
-
-mp_add N122:
-(assert false)
-
