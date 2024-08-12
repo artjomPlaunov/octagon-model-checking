@@ -1,9 +1,0 @@
-line 13:	N10 -{int x = 0;}-> N11
-line 14:	N12 -{n = __VERIFIER_nondet_int();}-> N13
-line 15:	N13 -{[!(n < 100)]}-> N16
-line 15:	N16 -{[!(n > 1000000)]}-> N14
-line 17:	N14 -{int y = n;}-> N18
-line 20:	N19 -{while}-> N20
-line 20:	N20 -{[!((x + y) <= 999999)]}-> N22
-line 46:	N112 -{__VERIFIER_assert((buf[999999]) == 999999)}-> N1
-line 3:	N2 -{[cond == 0]}-> N4
