@@ -60,7 +60,6 @@ def generate_cpa_file(input_fname, cpa_fname, octagon_results):
             line_num += 1
             continue
         else:
-            print(line)
             cpa_file.writelines([line])
         line_num += 1
 
@@ -92,6 +91,13 @@ def cleanup(l):
     return l
 
 def parse_interval(lhs,rhs):
+    mod, rem = None, None
+    if "%" in rhs:
+        rhs,mod = rhs.split(',')
+    modString = ""
+    if mod:
+        rem, mod = mod.split('%')
+        modString = f'&&(({lhs})%{mod}=={rem})'
     # trim off the brackets
     if len(rhs) >= 2:
         rhs = rhs[1:-1]
@@ -100,7 +106,7 @@ def parse_interval(lhs,rhs):
         lo = 'INT_MIN'
     if hi == '--':
         hi = 'INT_MAX'
-    return f'{lo}<={lhs}&&{lhs}<={hi}'
+    return f'{lo}<={lhs}&&{lhs}<={hi}{modString}'
 
 def parse_set(lhs, rhs):
     if len(rhs) >= 2:
@@ -108,7 +114,7 @@ def parse_set(lhs, rhs):
     # trim off brackets
     rhs = rhs.replace(';', ',')
     numbers = rhs.split(',')
-    return '||'.join(map(lambda num: f'{lhs}=={num}', numbers))
+    return '||'.join(map(lambda num: f'((*{lhs})=={num})', numbers))
          
 
 def parse_octagon(octagon):
